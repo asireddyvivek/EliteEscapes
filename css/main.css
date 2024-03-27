@@ -1,47 +1,66 @@
-/**
-Sample css code
-*/
-/* Set height to 100% for body and html to enable the background image to cover the whole page: */
-body,
-html {
-  height: 100%;
+body, h1, p, ul {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* CSS styles for the header */
+.header {
+    display: grid;
+    grid-template-columns: auto 1fr auto; /* Three columns: logo, navigation, empty space */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    background-color: #333; /* Header background color */
+    padding: 10px 0; /* Adjust padding */
 }
 
-/*Set background image*/
-.container {
-  background-image: url('https://doc-10-ao-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/r085o9ungppbiokopob2sfbekae4uqbb/1537920000000/14802840322886517493/*/110cT8sl-pOiHGgj9yToPkAqAzrr-RNfb');
-  height: 100%;
-  background-position: center;
-  background-size: cover;
+/* Logo styles */
+#logo {
+    height: 40px; /* Adjust the height to fit your design */
+    width: auto; /* This ensures the logo maintains its aspect ratio */
+    margin-right: 0; /* Adjusts the space between the logo and the nav */
+    margin-left: 30px;
 }
 
-/* Position text in the middle */
-.middle {
-  position: absolute;
-  color: beige;
-  top: 70%;
-  left: 39%;
-  text-align: center;
-  font-size: 25px;
+/* Keyframes for spinning animation */
+@keyframes spinOnce {
+    100% {
+        transform: rotate(360deg); /* Rotate the logo by 360 degrees */
+    }
 }
 
-/*Set circle in unordered list*/
-.middle ul {
-  list-style-type: circle;
+#logo:hover {
+    animation: spinOnce 1s linear; /* Apply spinOnce animation on hover */
+}
+/* Navigation styles */
+.navigation {
+    justify-self: center; /* Align navigation to the center */
 }
 
-/*Set text inside li tag to left*/
-.middle ul li {
-  text-align: left !important;
+nav ul {
+    list-style: none;
+    text-align: center;
+    background: #333;
+    padding: 10px 0;
+    margin: 0; /* Remove default margin */
 }
 
-/*Set text color for a tag inside middle class and ul>li element*/
-.middle ul li a {
-  color: beige;
-}
+    nav ul li {
+        display: inline-block; /* Display navigation items inline */
+        margin: 0 15px; /* Add spacing between items */
+        transition: width 0.3s; /* Add transition effect for width */
+    }
 
-/*Change text color and decoration for a tags inside middle class and ul>li element*/
-.middle ul li a:hover {
-  color: red;
-  text-decoration: none;
-}
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            display: block; /* Make anchor elements fill the entire width of the list item */
+            padding: 0px; /* Add padding to improve hover area */
+            transition: transform 0.3s; /* Add transition effect for transform */
+            font-size: 18px;
+        }
+
+        nav ul li:hover a {
+            transform: scale(1.1); /* Enlarge text on hover */
+            color: lightgoldenrodyellow; /* Change color on hover */
+        }
+
