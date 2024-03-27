@@ -36,6 +36,13 @@ body, h1, p, ul {
     justify-self: center; /* Align navigation to the center */
 }
 
+/* Hide the checkbox initially */
+.menu-toggle {
+    display: none;
+}
+
+
+
 nav ul {
     list-style: none;
     text-align: center;
@@ -63,4 +70,38 @@ nav ul {
             transform: scale(1.1); /* Enlarge text on hover */
             color: lightgoldenrodyellow; /* Change color on hover */
         }
+
+/* CSS for Hero section */
+.hero {
+    position: relative;
+    height: 400px; /* Adjust height as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#video-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-content {
+    position: relative; /* Ensure content stays above the video */
+    text-align: center;
+    color: white; /* Text color on top of the video */
+}
+
+.company-name {
+    font-size: 500%; /* Adjust font size as needed */
+    margin-bottom: 10px; /* Adjust spacing between company name and tagline */
+}
+
+.tagline {
+    font-size: 100%; /* Adjust font size as needed */
+}
+
 
