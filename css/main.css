@@ -1,19 +1,85 @@
-body, h1, p, ul {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-/* CSS styles for the header */
-.header {
-    display: grid;
-    grid-template-columns: auto 1fr auto; /* Three columns: logo, navigation, empty space */
-    align-items: center; /* Center vertically */
-    justify-content: center; /* Center horizontally */
-    background-color: #333; /* Header background color */
-    padding: 10px 0; /* Adjust padding */
+
+/* Style for the navbar */
+.navbar {
+    background-color: #333; /* Change as needed */
+    display: flex;
+    justify-content: center; /* Align items horizontally to center */
+    padding: 10px; /* Adjust padding as needed */
 }
 
-/* Logo styles */
+/* Style for the navbar items */
+.navbar-item {
+    margin-right: 150px; /* Adjust spacing between items as needed */
+    color: #fff; /* Change text color as needed */
+    text-decoration: none;
+    align-content: center;
+}
+.navbar-logo {
+    margin-right: auto; /* Push the logo to the left */
+    color: #fff; /* Change text color as needed */
+    text-decoration: none;
+}
+.fa-1x{
+    padding:5px;
+}
+
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    background-color: rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(12px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.sidebar-item {
+    padding: 0px 20px;
+    color: #fff; /* Change text color as needed */
+    margin: 20px 0px;
+    text-decoration: none;
+    align-content: center;
+}
+
+.close-btn{
+    color: white;
+    margin: 10px 10px;
+}
+.menu-bars {
+    margin-right: 20px; /* Adjust spacing between items as needed */
+    color: #fff; /* Change text color as needed */
+    text-decoration: none;
+    display: none;
+}
+/*Default styling based on screen size*/
+@media(max-width: 800px) {
+    .navbar-item{
+        display: none;
+    }
+    .menu-bars{
+        display:flex;
+    }
+}
+
+.navbar a:hover {
+    transform: scale(1.1); /* Enlarge text on hover */
+    color: lightgoldenrodyellow; /* Change color on hover */
+}
+
+
+
+/*styling for logo*/
 #logo {
     height: 40px; /* Adjust the height to fit your design */
     width: auto; /* This ensures the logo maintains its aspect ratio */
@@ -21,7 +87,6 @@ body, h1, p, ul {
     margin-left: 30px;
 }
 
-/* Keyframes for spinning animation */
 @keyframes spinOnce {
     100% {
         transform: rotate(360deg); /* Rotate the logo by 360 degrees */
@@ -31,49 +96,9 @@ body, h1, p, ul {
 #logo:hover {
     animation: spinOnce 1s linear; /* Apply spinOnce animation on hover */
 }
-/* Navigation styles */
-.navigation {
-    justify-self: center; /* Align navigation to the center */
-}
 
-/* Hide the checkbox initially */
-.menu-toggle {
-    display: none;
-}
-
-
-
-nav ul {
-    list-style: none;
-    text-align: center;
-    background: #333;
-    padding: 10px 0;
-    margin: 0; /* Remove default margin */
-}
-
-    nav ul li {
-        display: inline-block; /* Display navigation items inline */
-        margin: 0 15px; /* Add spacing between items */
-        transition: width 0.3s; /* Add transition effect for width */
-    }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            display: block; /* Make anchor elements fill the entire width of the list item */
-            padding: 0px; /* Add padding to improve hover area */
-            transition: transform 0.3s; /* Add transition effect for transform */
-            font-size: 18px;
-        }
-
-        nav ul li:hover a {
-            transform: scale(1.1); /* Enlarge text on hover */
-            color: lightgoldenrodyellow; /* Change color on hover */
-        }
-
-/* CSS for Hero section */
 .hero {
-    position: relative;
+    position: static;/*donot change it to relative or absolute We will not be able to see the dropdown*/
     height: 400px; /* Adjust height as needed */
     display: flex;
     justify-content: center;
@@ -81,7 +106,7 @@ nav ul {
 }
 
 #video-bg {
-    position: absolute;
+    position: static; /*donot change it to relative or absolute We will not be able to see the dropdown*/
     top: 0;
     left: 0;
     width: 100%;
@@ -89,6 +114,8 @@ nav ul {
     object-fit: cover;
 }
 
+
+/*CSS fr Hero Section*/
 .hero-content {
     position: relative; /* Ensure content stays above the video */
     text-align: center;
@@ -103,5 +130,3 @@ nav ul {
 .tagline {
     font-size: 100%; /* Adjust font size as needed */
 }
-
-
