@@ -19,18 +19,21 @@
     text-decoration: none;
     align-content: center;
 }
+
 .navbar-logo {
     margin-right: auto; /* Push the logo to the left */
     color: #fff; /* Change text color as needed */
     text-decoration: none;
 }
-.fa-1x{
-    padding:5px;
+
+.fa-1x {
+    padding: 5px;
 }
 
 
 .sidebar {
     position: fixed;
+    z-index: 1;
     top: 0;
     right: 0;
     height: 100vh;
@@ -44,6 +47,7 @@
     align-items: flex-start;
     justify-content: flex-start;
 }
+
 .sidebar-item {
     padding: 0px 20px;
     color: #fff; /* Change text color as needed */
@@ -52,10 +56,11 @@
     align-content: center;
 }
 
-.close-btn{
+.close-btn {
     color: white;
     margin: 10px 10px;
 }
+
 .menu-bars {
     margin-right: 20px; /* Adjust spacing between items as needed */
     color: #fff; /* Change text color as needed */
@@ -64,11 +69,12 @@
 }
 /*Default styling based on screen size*/
 @media(max-width: 800px) {
-    .navbar-item{
+    .navbar-item {
         display: none;
     }
-    .menu-bars{
-        display:flex;
+
+    .menu-bars {
+        display: flex;
     }
 }
 
@@ -98,20 +104,22 @@
 }
 
 .hero {
-    position: static;/*donot change it to relative or absolute We will not be able to see the dropdown*/
+    position: absolute; /*donot change it to relative or absolute We will not be able to see the dropdown*/
     height: 400px; /* Adjust height as needed */
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 #video-bg {
-    position: static; /*donot change it to relative or absolute We will not be able to see the dropdown*/
+    position: absolute; /*donot change it to relative or absolute We will not be able to see the dropdown*/
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    z-index: -1;
 }
 
 
@@ -120,6 +128,7 @@
     position: relative; /* Ensure content stays above the video */
     text-align: center;
     color: white; /* Text color on top of the video */
+    z-index: 0;
 }
 
 .company-name {
