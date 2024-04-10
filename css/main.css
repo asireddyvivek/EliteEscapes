@@ -270,7 +270,8 @@ body {
             margin-bottom: 10px; /* Add margin between points */
             margin-left:30px;
         }
-    /* Footer Styles */
+
+/* Footer Styles */
 .footer {
     display: flex; /* Use flexbox for layout */
     justify-content: space-between; /* Space out the two halves */
@@ -280,45 +281,44 @@ body {
     padding: 20px; /* Padding */
 }
 
-/* Left Half Styles */
-.footer .left-half {
-    flex: 1; /* Take up half of the space */
-}
+    /* Left Half Styles */
+    .footer .left-half {
+        flex: 1; /* Take up half of the space */
+    }
 
-/* Right Half Styles */
-.footer .right-half {
-    flex: 1; /* Take up half of the space */
-    display: flex; /* Use flexbox for logo alignment */
-    justify-content: flex-end; /* Align logo to the right */
-}
+    /* Right Half Styles */
+    .footer .right-half {
+        flex: 1; /* Take up half of the space */
+        display: flex; /* Use flexbox for logo alignment */
+        justify-content: flex-end; /* Align logo to the right */
+    }
 
-/* Website Name Styles */
-.footer .website-name {
-    margin-bottom: 10px; /* Add margin below the heading */
-}
+    /* Website Name Styles */
+    .footer .website-name {
+        margin-bottom: 10px; /* Add margin below the heading */
+    }
 
-/* Icon Container Styles */
-.footer .icon-container {
-    display: flex; /* Use flexbox for icon alignment */
-}
+    /* Icon Container Styles */
+    .footer .icon-container {
+        display: flex; /* Use flexbox for icon alignment */
+    }
 
-.footer .icon-container a {
-    color: #fff; /* Icon color */
-    margin-right: 30px; /* Add spacing between icons */
-}
+        .footer .icon-container a {
+            color: #fff; /* Icon color */
+            margin-right: 30px; /* Add spacing between icons */
+        }
 
-.footer .icon-container a:last-child {
-    margin-right: 0; /* Remove margin for the last icon */
-}
+            .footer .icon-container a:last-child {
+                margin-right: 0; /* Remove margin for the last icon */
+            }
 
-.footer .icon-container a:hover {
-    color: lightgoldenrodyellow; /* Change color on hover */
-}
+            .footer .icon-container a:hover {
+                color: lightgoldenrodyellow; /* Change color on hover */
+            }
 
-/* Footer Logo Styles */
-.footer .footer-logo {
-    height: 40px; /* Logo height */
-    width: auto; /* Maintain aspect ratio */
-}
-
+    /* Footer Logo Styles */
+    .footer .footer-logo {
+        height: 40px; /* Logo height */
+        width: auto; /* Maintain aspect ratio */
+    }
 
