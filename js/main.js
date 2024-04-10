@@ -1,14 +1,42 @@
-/**
- * Your JS code here
- */
+/* JavaScript for sidebar */
+function hideSidebar() {
+    const menu = document.querySelector(".sidebar");
+    menu.style.display = "none";
+    console.log('Sidebar closed');
+}
 
-/**
- * Sample code
- */
-document.addEventListener('DOMContentLoaded', function() {
-  var ulElement = document.getElementById('links');
-  var liElement = document.createElement('li');
-  liElement.appendChild(document.createTextNode('created by main.js'));
+function showSidebar() {
+    const menu = document.querySelector(".sidebar");
+    menu.style.display = "flex";
+    console.log('Sidebar opened');
+}
 
-  ulElement.appendChild(liElement);
+/* JavaScript for feedback form */
+function showFeedbackForm() {
+    // Hide the sidebar
+    hideSidebar();
+
+    // Show the feedback form
+    document.getElementById("feedback-overlay").style.display = "flex";
+    console.log('Feedback form shown');
+}
+
+function closeFeedbackForm() {
+    document.getElementById("feedback-overlay").style.display = "none";
+    console.log('Feedback form closed');
+}
+
+/* Sample code */
+document.addEventListener('DOMContentLoaded', function () {
+    var ulElement = document.getElementById('links');
+    var liElement = document.createElement('li');
+    liElement.appendChild(document.createTextNode('Created by main.js'));
+
+    ulElement.appendChild(liElement);
+    console.log('Sample code executed');
+});
+
+/* JavaScript for feedback button */
+document.getElementById("feedback-button").addEventListener("click", function () {
+    showFeedbackForm();
 });
