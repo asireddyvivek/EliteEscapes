@@ -21,13 +21,3 @@ function closeFeedbackForm() {
     document.getElementById("feedback-overlay").style.display = "none";
     console.log('Feedback form closed');
 }
-
-/* Sample code */
-document.addEventListener('DOMContentLoaded', function () {
-    var ulElement = document.getElementById('links');
-    var liElement = document.createElement('li');
-    liElement.appendChild(document.createTextNode('Created by main.js'));
-
-    ulElement.appendChild(liElement);
-    console.log('Sample code executed');
-});
