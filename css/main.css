@@ -418,6 +418,10 @@ body {
 
 /* Responsive Styles */
 @media (max-width: 800px) {
+    /* Hide sidebar by default on small screens */
+    .sidebar {
+        display: none;
+    }
     .navbar-item {
         display: none;
     }
