@@ -1,80 +1,85 @@
+/* Global Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0; /* Reset margin */
+    padding: 0; /* Reset padding */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
-/* Style for the navbar */
+body {
+    background-color: rgba(0, 0, 0, 0.15); /* Set background color*/
+}
+
+/* Navbar Styles */
 .navbar {
-    background-color: #333; /* Change as needed */
-    display: flex;
+    background-color: #333; /* Navbar background color */
+    display: flex; /* Display navbar items as flexbox */
     justify-content: center; /* Align items horizontally to center */
-    padding: 10px; /* Adjust padding as needed */
+    padding: 10px; /* Padding around navbar */
 }
 
-/* Style for the navbar items */
 .navbar-item {
     margin-right: 150px; /* Adjust spacing between items as needed */
-    color: #fff; /* Change text color as needed */
-    text-decoration: none;
+    color: #fff; /* Text color */
+    text-decoration: none; /* Remove default text decoration */
     align-content: center;
 }
 
 .navbar-logo {
     margin-right: auto; /* Push the logo to the left */
-    color: #fff; /* Change text color as needed */
-    text-decoration: none;
+    color: #fff; /* Text color */
+    text-decoration: none; /* Remove default text decoration */
 }
 
 .fa-1x {
-    padding: 5px;
+    padding: 5px; /* Add padding around icon */
 }
 
-
+/* Sidebar Styles */
 .sidebar {
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    right: 0;
-    height: 100vh;
-    width: 250px;
-    background-color: rgba(0, 0, 0, 0.15);
-    backdrop-filter: blur(12px);
-    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
-    list-style: none;
-    display: none;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
+    position: fixed; /* Fixed positioning */
+    z-index: 1; /* Ensure sidebar stays above other content */
+    top: 0; /* Position from the top */
+    right: 0; /* Position from the right */
+    height: 100vh; /* Full height */
+    width: 250px; /* Sidebar width */
+    background-color: rgba(0, 0, 0, 0.15); /* Sidebar background color */
+    backdrop-filter: blur(12px); /* Apply blur effect */
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1); /* Add shadow */
+    list-style: none; /* Remove default list style */
+    display: none; /* Initially hide sidebar */
+    flex-direction: column; /* Arrange items in column */
+    align-items: flex-start; /* Align items to start */
+    justify-content: flex-start; /* Align content to start */
 }
 
 .sidebar-item {
-    padding: 0px 20px;
-    color: #fff; /* Change text color as needed */
-    margin: 20px 0px;
-    text-decoration: none;
+    padding: 0px 20px; /* Add padding to items */
+    color: #fff; /* Text color */
+    margin: 20px 0px; /* Adjust margin */
+    text-decoration: none; /* Remove default text decoration */
     align-content: center;
 }
 
 .close-btn {
-    color: white;
-    margin: 10px 10px;
+    color: white; /* Text color */
+    margin: 10px 10px; /* Adjust margin */
 }
 
 .menu-bars {
     margin-right: 20px; /* Adjust spacing between items as needed */
-    color: #fff; /* Change text color as needed */
-    text-decoration: none;
-    display: none;
+    color: #fff; /* Text color */
+    text-decoration: none; /* Remove default text decoration */
+    display: none; /* Initially hide menu bars */
 }
-/*Default styling based on screen size*/
+
+/* Responsive Styles */
 @media(max-width: 800px) {
     .navbar-item {
-        display: none;
+        display: none; /* Hide navbar items on small screens */
     }
 
     .menu-bars {
-        display: flex;
+        display: flex; /* Display menu bars on small screens */
     }
 }
 
@@ -83,19 +88,17 @@
     color: lightgoldenrodyellow; /* Change color on hover */
 }
 
-
-
-/*styling for logo*/
+/* Logo Styles */
 #logo {
-    height: 40px; /* Adjust the height to fit your design */
-    width: auto; /* This ensures the logo maintains its aspect ratio */
-    margin-right: 0; /* Adjusts the space between the logo and the nav */
-    margin-left: 30px;
+    height: 40px; /* Logo height */
+    width: auto; /* Maintain aspect ratio */
+    margin-right: 0; /* Adjust space between logo and nav */
+    margin-left: 30px; /* Adjust space between logo and the left edge */
 }
 
 @keyframes spinOnce {
     100% {
-        transform: rotate(360deg); /* Rotate the logo by 360 degrees */
+        transform: rotate(360deg); /* Rotate the logo */
     }
 }
 
@@ -103,39 +106,168 @@
     animation: spinOnce 1s linear; /* Apply spinOnce animation on hover */
 }
 
+/* Hero Section Styles */
 .hero {
-    position: absolute; /*donot change it to relative or absolute We will not be able to see the dropdown*/
-    height: 400px; /* Adjust height as needed */
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 400px; /* Hero section height */
+    width: 100%; /* Full width */
+    display: flex; /* Display items as flexbox */
+    justify-content: center; /* Align items horizontally to center */
+    align-items: center; /* Align items vertically to center */
+    background-color: rgba(0, 0, 0, 0.5); /* Add a background color for better visibility */
+    color: white; /* Text color on top of the hero section */
+    position: relative; /* Ensure content stays above the video */
 }
 
 #video-bg {
-    position: absolute; /*donot change it to relative or absolute We will not be able to see the dropdown*/
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
+    position: absolute; /* Ensure video stays below other content */
+    top: 0; /* Position from the top */
+    left: 0; /* Position from the left */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    object-fit: cover; /* Ensure video covers the entire area */
+    z-index: -1; /* Place video below other content */
 }
 
-
-/*CSS fr Hero Section*/
+/* Hero Content Styles */
 .hero-content {
-    position: relative; /* Ensure content stays above the video */
-    text-align: center;
-    color: white; /* Text color on top of the video */
-    z-index: 0;
+    text-align: center; /* Align text to center */
+    z-index: 1; /* Set z-index */
 }
 
 .company-name {
     font-size: 500%; /* Adjust font size as needed */
     margin-bottom: 10px; /* Adjust spacing between company name and tagline */
+    color: lightgoldenrodyellow; /* Company name text color */
 }
 
 .tagline {
     font-size: 100%; /* Adjust font size as needed */
+    color: lightgoldenrodyellow; /* Tagline text color */
 }
+
+/* Explore Packages Button Styles */
+.explore-container {
+    position: absolute; /* Position relative to its container */
+    bottom: 20px; /* Adjust this value to control the vertical position */
+    right: 20px; /* Adjust this value to control the horizontal position */
+    z-index: 1; /* Ensure the button stays above the video */
+    text-align: right; /* Align button to the right */
+}
+
+.explore-btn {
+    background-color: lightgoldenrodyellow; /* Button background color */
+    color: gray; /* Button text color */
+    padding: 10px 20px; /* Button padding */
+    border: none; /* Remove button border */
+    border-radius: 20px; /* Button border radius */
+    font-size: 16px; /* Button font size */
+    cursor: pointer; /* Cursor style */
+}
+
+    .explore-btn:hover {
+        background-color: palegoldenrod; /* Change the background color on hover */
+        transform: scale(1.1); /* Enlarge button on hover */
+    }
+
+/* Packages Section Styles */
+.packages {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
+    max-width: auto; /* Adjust maximum width as needed */
+    margin: 20px; /* Automatically centers the element horizontally */
+}
+
+.package {
+    position: relative; /* Set position to relative for text overlay positioning */
+    display: inline-block;
+    width: calc(30% - 40px); /* Each item takes up 30% of the container's width with gap */
+    margin: 0 20px; /* Adjust margin as needed */
+    overflow: hidden; /* Ensure nothing spills out of the container */
+    transition: transform 0.3s ease-in-out; /* Apply transition to the whole item */
+    border-radius: 10px; /* Curve the edges */
+    height: 400px; /* Set a fixed height for the package container */
+}
+
+    .package img {
+        width: 100%; /* Make image fill the container */
+        height: 100%; /* Make image fill the container */
+        object-fit: cover; /* Ensure the image covers the container */
+        border-radius: 10px; /* Curve the edges */
+    }
+
+    .package .image-text {
+        position: absolute; /* Set position to absolute for text overlay */
+        bottom: 10px; /* Adjust position from bottom */
+        left: 10px; /* Adjust position from left */
+        background-color: rgba(255, 255, 255, 0.7); /* Background color for text */
+        padding: 5px 10px; /* Padding for text */
+        border-radius: 5px; /* Curve the edges */
+    }
+
+
+    .package:hover {
+        transform: scale(1.05); /* Scale the entire item */
+    }
+
+        .package:hover .image-text {
+            opacity: 1; /* Show the text on hover */
+            transform: translateY(0); /* Move the text up on hover */
+        }
+
+/* Why Choose Us Section Styles */
+.why-choose-us {
+    background-color: lightgray; /* Choose your background color */
+    padding: 50px 0; /* Adjust padding as needed */
+}
+
+    .why-choose-us .content-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .why-choose-us .image-container {
+        flex: 1;
+        text-align: center; /* Center align content */
+    }
+
+        .why-choose-us .image-container img {
+            border-radius: 50%; /* Make the image round */
+            max-width: 100%;
+            height: auto;
+        }
+
+    .why-choose-us .text-container {
+        flex: 1; /* Take up remaining space */
+        padding: 0 20px; /* Padding */
+        display: flex; /* Use flexbox */
+        flex-direction: column; /* Arrange children vertically */
+        justify-content: center; /* Center content vertically */
+        align-items: center; /* Center content horizontally */
+    }
+
+        .why-choose-us .text-container h2 {
+            font-size: 30px; /* Increased by 50% */
+            margin-bottom: 20px; /* Add margin between heading and points */
+            margin-left: 10px;
+            color: darkgoldenrod; /* Set text color */
+        }
+
+        .why-choose-us .text-container ul {
+            list-style-type: none; /* Remove default list style */
+            padding-left: 0; /* Remove default padding */
+        }
+
+        .why-choose-us .text-container li {
+            font-size: 26px; /* Increased by 50% */
+            color: lightgoldenrodyellow; /* Set text color to lightgoldenrodyellow */
+            margin-bottom: 10px; /* Add margin between points */
+            margin-left:30px;
+        }
+
