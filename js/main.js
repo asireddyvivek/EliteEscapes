@@ -13,10 +13,6 @@ function showSidebar() {
 
 /* JavaScript for feedback form */
 function showFeedbackForm() {
-    // Hide the sidebar
-    hideSidebar();
-
-    // Show the feedback form
     document.getElementById("feedback-overlay").style.display = "flex";
     console.log('Feedback form shown');
 }
@@ -34,9 +30,4 @@ document.addEventListener('DOMContentLoaded', function () {
 
     ulElement.appendChild(liElement);
     console.log('Sample code executed');
-});
-
-/* JavaScript for feedback button */
-document.getElementById("feedback-button").addEventListener("click", function () {
-    showFeedbackForm();
 });
