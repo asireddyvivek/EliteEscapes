@@ -291,6 +291,106 @@ body {
         transform: scale(1.2);
     }
 
+/*About us Styles*/
+.content-wrapper {
+    margin: auto;
+    max-width: 960px;
+    text-align: justify;
+}
+
+    .content-wrapper h1 {
+        font-size: 30px;
+        margin-bottom: 20px;
+        margin-left: 10px;
+        color: darkgoldenrod;
+        text-align: center;
+    }
+
+    .content-wrapper p {
+        margin-bottom: 50px;
+    }
+
+.about-wrapper {
+    display: flex;
+    justify-content: space-between; /* This will maximize the space between the text and image */
+    align-items: center;
+    width: 100%; /* Ensure the wrapper takes up the full width */
+    margin: 0; /* Remove any default margin */
+    padding: 0; /* Remove any default padding */
+}
+
+.about-text {
+    flex: 1; /* Allows the text block to grow */
+    font-size: 23px;
+    color: #968005;
+    text-align: justify;
+    margin-right: 5%; /* Increase right margin to push text further to the left */
+    padding: 0 1%; /* Add padding if needed for maintaining some space inside the text block */
+}
+
+.about-image {
+    flex: 1; /* Allows the image block to grow */
+    display: flex;
+    justify-content: flex-end; /* Push the image towards the right */
+    margin-left: 5%; /* Increase left margin to push image further to the right */
+    padding: 0 1%; /* Add padding if needed for maintaining some space inside the image block */
+}
+
+    .about-image img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 30%; /* Adjust as needed */
+    }
+
+
+.team-member {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+}
+
+.team-photo {
+    width: 150px;
+    height: 250px;
+    object-fit: cover;
+}
+
+    .team-photo:hover {
+        transform: scale(1.05);
+    }
+
+.team-description h2 {
+    text-align: center;
+}
+
+.members-title {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.team-description {
+    margin-top: 10px;
+    text-align: left;
+}
+
+.history-title {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.history-description {
+    text-align: justify;
+    margin: auto;
+    max-width: 90%;
+    color: #968005;
+    font-size: 20px;
+}
+
+
 /* Footer Styles */
 .footer {
     display: flex;
