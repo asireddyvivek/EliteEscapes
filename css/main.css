@@ -698,14 +698,14 @@ body {
         content: url('../img/dublin_mob.jpg');
     }
 
+
     .package:hover {
-        transform: none;
-        transition: none;
+        transform: scale(1.05);
     }
 
         .package:hover .image-text {
             opacity: 1;
-            transform: none;
+            transform: translate(-50%, -50%);
         }
 
 
