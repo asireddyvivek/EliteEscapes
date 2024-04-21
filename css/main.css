@@ -161,6 +161,7 @@ body {
     src: url('path_to_papyrus_font.woff') format('woff'),
          url('path_to_papyrus_font.ttf') format('truetype'); */
 }
+
 .packages {
     display: flex;
     justify-content: center;
@@ -182,6 +183,7 @@ body {
     border-radius: 10px;
     height: 400px;
 }
+
     .package .price {
         position: absolute;
         top: 10px; /* Adjust this value to position the text vertically */
@@ -212,7 +214,7 @@ body {
         font-size: 50px; /* Font size */
         padding: 10px 20px; /* Padding around the text */
         z-index: 1; /* Ensure text appears above the image */
-}
+    }
 
     .package:hover {
         transform: scale(1.05);
@@ -337,7 +339,6 @@ body {
 
     .content-wrapper h1 {
         font-size: 30px;
-        margin-bottom: 20px;
         margin-left: 10px;
         color: darkgoldenrod;
         text-align: center;
@@ -559,6 +560,7 @@ body {
     .sidebar {
         display: none;
     }
+
     .navbar-item {
         display: none;
     }
@@ -568,7 +570,7 @@ body {
     }
 
     .sidebar {
-     /* display: block; */
+        /* display: block; */
         z-index: 2;
     }
 
@@ -609,13 +611,14 @@ body {
     }
 
     .package:hover {
-/*        transform: scale(1.05);
-   */ }
+                transform: none;
+   
+    }
 
         .package:hover .image-text {
-        /*    opacity: 1;
-            transform: translateY(0);
-        */}
+            opacity:1;
+        
+        }
 
     .blog-btn:hover {
         background-color: palegoldenrod;
@@ -641,9 +644,9 @@ body {
     box-sizing: border-box;
 }
 
-.text-overlay p + button {
-    margin-top: 10px; /* Adjust margin as needed */
-}
+    .text-overlay p + button {
+        margin-top: 10px; /* Adjust margin as needed */
+    }
 
 .book {
     background-color: #333;
@@ -673,7 +676,8 @@ body {
     object-fit: cover;
     z-index: -1;
 }
-#bali_firstimg {
+
+.bali_firstimg {
     position: absolute;
     top: 0;
     left: 0;
@@ -682,25 +686,27 @@ body {
     object-fit: cover;
     z-index: -1;
 }
-https://images.pexels.com/photos/1208781/pexels-photo-1208781.jpeg?cs=srgb&dl=pexels-mark-dalton-1208781.jpg&fm=jpg
+
 
 @media only screen and (max-width: 768px) {
-    #first_img {
+    #first_img{
         content: url('../img/dubai.avif');
-        height:auto;
+        height: auto;
     }
-    #bali_firstimg{
+
+    .bali_firstimg {
         content: url('../img/dublin_mob.jpg');
     }
 
-.package:hover {
-    transform: none;
-}
-
-    .package:hover .image-text {
-        opacity: 0;
+    .package:hover {
         transform: none;
+        transition: none;
     }
-    
-}
 
+        .package:hover .image-text {
+            opacity: 1;
+            transform: none;
+        }
+
+
+}
